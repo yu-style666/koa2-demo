@@ -99,10 +99,7 @@
       success(result) {
         console.log(result);
         if (result && result.success && result.data && result.data.pictureUrl) {
-          previewElem.innerHTML =
-            '<img src="' +
-            result.data.pictureUrl +
-            '" style="max-width: 100%">';
+          previewElem.innerHTML = `<img src="${result.data.pictureUrl}" style="max-width: 100%">`;
         }
       },
       progress(data) {
