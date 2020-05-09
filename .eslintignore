@@ -1,0 +1,13 @@
+# 忽略eslint校验
+
+/config
+/internals
+/server
+/public
+/mock
+libs/
+/.commitlintrc.js
+/.postcssrc.js
+/.prettierrc.js
+/jest.config.js
+/node_modules

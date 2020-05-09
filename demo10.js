@@ -1,6 +1,8 @@
+// koa-static中间件
+
 const Koa = require("koa");
 const path = require("path");
-const static = require("koa-static");
+const Static = require("koa-static");
 
 const app = new Koa();
 const port = 5200;
@@ -8,7 +10,7 @@ const port = 5200;
 // 静态资源目录对于相对入口文件index.js的路径
 const staticPath = "./static";
 
-app.use(static(path.join(__dirname, staticPath)));
+app.use(Static(path.join(__dirname, staticPath)));
 
 app.use(async (ctx) => {
   const url = `http://localhost:${port}/images/icon-fire.png`;
