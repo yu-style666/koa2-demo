@@ -2,6 +2,7 @@
 
 const Koa = require("koa");
 const fs = require("fs");
+const path = require("path");
 
 const app = new Koa();
 const port = 5200;
@@ -13,7 +14,8 @@ const port = 5200;
  */
 const render = (page) => {
   return new Promise((resolve, reject) => {
-    let viewUrl = `./view/${page}`;
+    const viewUrl = path.join(__dirname, `./view/${page}`);
+
     fs.readFile(viewUrl, "binary", (err, data) => {
       if (err) {
         reject(err);
